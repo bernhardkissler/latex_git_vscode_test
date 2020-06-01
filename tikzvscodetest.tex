@@ -24,33 +24,33 @@
 %
 \begin{document}
 \begin{tikzpicture} %alternatively with color (right graphic)
-  \tikzstyle{every node}=[font=\Large]
-  %draw marks
-  \draw [-] (0,0) -- (0,0) node[below, yshift=-2pt] {$0$};
-  \draw [-] (\xscale*0.5,0) -- (\xscale*0.5,0) node[below, yshift=-2pt] {$0.5$};
-  \draw [-] (\xscale,0) -- (\xscale,0) node[below, yshift=-2pt] {$1$};
-  \draw [-] (0,\yscale*0.5) -- (0,\yscale*0.5) node[left,xshift=-2pt] {$0.5$};
-  \draw [-] (0,\yscale) -- (0,\yscale) node[left,xshift=-2pt] {$1$};
-  %draw functions
-  \begin{axis}[domain=0:1, smooth, xmin=0, xmax=1, ymin=0, ymax=1, width=\xscale cm, height=\yscale cm, scale only axis=true, ticks=none, legend pos=north west] %This sets up a new axis environment
-    \addplot [samples=3,dashed,color=gray, forget plot] {x}; %Diagonal
-    \addplot [samples=2000,thick, forget plot] {\prelec{x}{\prelecalpha}{\prelecbetaone}};
-    \addplot [samples=2000,thick,dashed,forget plot] {\prelec{x}{\prelecalpha}{\prelecbetatwo}};
-    \addplot [samples=2000,thick,dotted,forget plot] {\prelec{x}{\prelecalpha}{\prelecbetathree}};
-    \addplot [samples=2000,thick,dash dot,forget plot] {\prelec{x}{\prelecalpha}{\prelecbetafour}};
-    %legend
-    \addlegendentry{$b=\prelecbetaone$}
-    \addlegendimage{thick}
-    \addlegendentry{$b=\prelecbetatwo$}
-    \addlegendimage{thick,dashed}
-    \addlegendentry{$b=\prelecbetathree$}
-    \addlegendimage{thick,dotted}
-    \addlegendentry{$b=\prelecbetafour$}
-    \addlegendimage{thick,dash dot}
-    %		\addlegendentry{$w(p)=e^{-\prelecbeta(-ln(p))^{\prelecalpha}}$}
-    %		\addlegendimage{no markers,black}
-    %		\addlegendentry{} %This adds an empty line in the legend for a better fit
-    %		\addlegendimage{empty legend}
-  \end{axis}
+	\tikzstyle{every node}=[font=\Large]
+	%draw marks
+	\draw [-] (0,0) -- (0,0) node[below, yshift=-2pt] {$0$};
+	\draw [-] (\xscale*0.5,0) -- (\xscale*0.5,0) node[below, yshift=-2pt] {$0.5$};
+	\draw [-] (\xscale,0) -- (\xscale,0) node[below, yshift=-2pt] {$1$};
+	\draw [-] (0,\yscale*0.5) -- (0,\yscale*0.5) node[left,xshift=-2pt] {$0.5$};
+	\draw [-] (0,\yscale) -- (0,\yscale) node[left,xshift=-2pt] {$1$};
+	%draw functions
+	\begin{axis}[domain=0:1, smooth, xmin=0, xmax=1, ymin=0, ymax=1, width=\xscale cm, height=\yscale cm, scale only axis=true, ticks=none, legend pos=north west] %This sets up a new axis environment
+		\addplot [samples=3,dashed,color=gray, forget plot] {x}; %Diagonal
+		\addplot [samples=2000,thick, forget plot] {\prelec{x}{\prelecalpha}{\prelecbetaone}};
+		\addplot [samples=2000,thick,dashed,forget plot] {\prelec{x}{\prelecalpha}{\prelecbetatwo}};
+		\addplot [samples=2000,thick,dotted,forget plot] {\prelec{x}{\prelecalpha}{\prelecbetathree}};
+		\addplot [samples=2000,thick,dash dot,forget plot] {\prelec{x}{\prelecalpha}{\prelecbetafour}};
+		%legend
+		\addlegendentry{$b=\prelecbetaone$}
+		\addlegendimage{thick}
+		\addlegendentry{$b=\prelecbetatwo$}
+		\addlegendimage{thick,dashed}
+		\addlegendentry{$b=\prelecbetathree$}
+		\addlegendimage{thick,dotted}
+		\addlegendentry{$b=\prelecbetafour$}
+		\addlegendimage{thick,dash dot}
+		%		\addlegendentry{$w(p)=e^{-\prelecbeta(-ln(p))^{\prelecalpha}}$}
+		%		\addlegendimage{no markers,black}
+		%		\addlegendentry{} %This adds an empty line in the legend for a better fit
+		%		\addlegendimage{empty legend}
+	\end{axis}
 \end{tikzpicture}
 \end{document}
